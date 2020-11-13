@@ -20,7 +20,7 @@ class CIExposureAdjustVC: UIViewController, UIImagePickerControllerDelegate, UIN
         img.contentMode = .scaleAspectFill
         img.clipsToBounds = true
         return img
-    }()
+    }() 
     
     let EVLabel:UILabel = {
         let l = UILabel()
