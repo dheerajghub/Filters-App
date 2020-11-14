@@ -125,4 +125,43 @@ extension CIFilter  {
         filter.setValue(inputEV, forKey: kCIInputEVKey)
         return filter
     }
+    
+    static func addGammaAdjust(inputImage:CIImage, inputPower:NSNumber) -> CIFilter? {
+        guard let filter = CIFilter(name: "CIGammaAdjust") else {
+            return nil
+        }
+        filter.setDefaults()
+        filter.setValue(inputImage, forKey: kCIInputImageKey)
+        filter.setValue(inputPower, forKey: "inputPower")
+        return filter
+    }
+    
+    static func addHueAdjust(inputImage:CIImage, inputAngle:NSNumber) -> CIFilter? {
+        guard let filter = CIFilter(name: "CIHueAdjust") else {
+            return nil
+        }
+        filter.setDefaults()
+        filter.setValue(inputImage, forKey: kCIInputImageKey)
+        filter.setValue(inputAngle, forKey: "inputAngle")
+        return filter
+    }
+    
+    static func addLinearToSRGBToneCurve(inputImage:CIImage) -> CIFilter? {
+        guard let filter = CIFilter(name: "CILinearToSRGBToneCurve") else {
+            return nil
+        }
+        filter.setDefaults()
+        filter.setValue(inputImage, forKey: kCIInputImageKey)
+        return filter
+    }
+    
+    static func addVibrance(inputImage:CIImage, inputAmount:NSNumber) -> CIFilter? {
+        guard let filter = CIFilter(name: "CIVibrance") else {
+            return nil
+        }
+        filter.setDefaults()
+        filter.setValue(inputImage, forKey: kCIInputImageKey)
+        filter.setValue(inputAmount, forKey: kCIInputAmountKey)
+        return filter
+    }
 }

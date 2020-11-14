@@ -30,6 +30,10 @@ class DataViewController: UIViewController {
                 SubCategoryFilter(title: "CIColorControl", description: "Adjusts saturation, brightness, and contrast values.", navigateTo: CIColorControlVC()),
                 SubCategoryFilter(title: "CIColorPolynomial", description: "Modifies the pixel values in an image by applying a set of cubic polynomials.", navigateTo: CIColorPolynomialVC()),
                 SubCategoryFilter(title: "CIExposureAdjust", description: "Adjusts the exposure setting for an image similar to the way you control exposure for a camera when you change the F-stop.", navigateTo: CIExposureAdjustVC()),
+                SubCategoryFilter(title: "CIGammaAdjust", description: "It adjusts midtone brightness.", navigateTo: CIGammaAdjustVC()),
+                SubCategoryFilter(title: "CIHueAdjust", description: "Changes the overall hue, or tint, of the source pixels.", navigateTo: CIHueAdjustVC()),
+                SubCategoryFilter(title: "CILinearToSRGBToneCurve", description: "Maps color intensity from a linear gamma curve to the sRGB color space.", navigateTo: CILinearToSRGBToneCurveVC()),
+                SubCategoryFilter(title: "CIVibrance", description: "Adjusts the saturation of an image while keeping pleasing skin tones.", navigateTo: CIVibranceVC())
             ])
         ]
     }
